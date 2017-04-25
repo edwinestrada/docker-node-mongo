@@ -8,5 +8,14 @@ services:
       - ./:/app
     ports:
       - "3000:3000"
+    # links tag allows to link services between containers
+    # ‘mongo’ service name is also added to the /etc/hosts in the container
+    links:
+      - mongo
+  mongo:
+    image: mongo
+    # allowing to access the service as such: mongodb://mongo:27017
+    ports:
+      - "27017:27017"
 # starts the container
 # > docker-compose up

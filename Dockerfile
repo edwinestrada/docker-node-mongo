@@ -17,7 +17,8 @@ RUN npm install
 COPY . /app
 
 # The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime.
-EXPOSE 3000
+# EXPOSE 3000
+# Didn't work, used docker run -p 3000:3000 instead
 
 # The main purpose of a CMD is to provide defaults for an executing container.
 CMD ["npm", "start"]

@@ -1,0 +1,12 @@
+version: "2"
+services:
+  web:
+    # building the image if not already present
+    build: .
+    # mounts the host directory on the container in /app
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+# starts the container
+# > docker-compose up

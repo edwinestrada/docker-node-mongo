@@ -20,5 +20,7 @@ COPY . /app
 # EXPOSE 3000
 # Didn't work, used docker run -p 3000:3000 instead
 
+ENV MONGO_URI=mongodb://mongo:27017/prueba
+
 # The main purpose of a CMD is to provide defaults for an executing container.
 CMD ["npm", "start"]

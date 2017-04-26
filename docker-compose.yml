@@ -17,5 +17,7 @@ services:
     # allowing to access the service as such: mongodb://mongo:27017
     ports:
       - "27017:27017"
-# starts the container
-# > docker-compose up
+  mongodata:
+    image: tianon/true
+    volumes:
+      - /data/db
